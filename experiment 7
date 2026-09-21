@@ -1,0 +1,10 @@
+import re
+
+def find_emails(text):
+    pattern = r'\b[\w.-]+@[\w.-]+\.\w+\b'
+    return re.findall(pattern, text)
+
+if __name__ == "__main__":
+    text = input("Enter text: ")
+    emails = find_emails(text)
+    print("Email addresses:", emails)
